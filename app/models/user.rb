@@ -2,13 +2,13 @@ class User < ApplicationRecord
   validates :username, :uid, :token, :image, presence: true
 
   def self.from_github(data, access_token)
-    user           = User.find_or_create_by(uid: data['id'], provider: 'github')
-    user.username  = data['login']
-    user.token     = access_token
-    user.email     = data['email']
-    user.image     = data['avatar_url']
-    user.save
-
+    user = User.find_or_create_by(username: data['login'],
+                                  uid:      data['id'],
+                                  provider: 'github',
+                                  image:    data['avatar_url'],
+                                  email:    data['email'],
+                                  token:    access_token
+                                 )
     return user
   end
 end
