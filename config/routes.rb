@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   get '/events', to: 'events#index'
   get '/pulls', to: 'pulls#index'
   get '/repos', to: 'repos#index'
+  get '/commits', to: 'commits#index'
+  get '/organizations', to: 'organizations#index'
+  get '/following', to: 'following#index'
+  get '/followers', to: 'followers#index'
 end

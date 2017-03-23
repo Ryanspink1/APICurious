@@ -8,6 +8,15 @@ require 'rspec/rails'
 require 'capybara/rails'
 require 'capybara/rspec'
 require 'simplecov'
+require 'webmock/rspec'
+require 'vcr'
+require 'vcr_setup.rb'
+
+VCR.configure do |config|
+  config.cassette_library_dir = "spec/cassettes"
+  config.hook_into :webmock
+end
+
 SimpleCov.start
 
 Shoulda::Matchers.configure do |config|

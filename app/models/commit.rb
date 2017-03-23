@@ -19,7 +19,7 @@ class Commit < OpenStruct
   end
 
   def self.order_commits(current_user)
-    jobs = Commit.commits(current_user).sort_by do |commit|
+    Commit.commits(current_user).sort_by do |commit|
       commit.commit[:committer][:date]
     end
   end

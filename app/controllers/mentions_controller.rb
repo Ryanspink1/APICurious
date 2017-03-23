@@ -4,5 +4,4 @@ class MentionsController < ApplicationController
   def index
     @mentions = Mention.find_by(current_user)
   end
-
 end

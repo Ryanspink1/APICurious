@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+  body { padding-top: 70px; }
+
+  table {
+          /*align-items: center;*/
+
+  }
+
+  #repo_table {
+    width: 800px;
+    align-items: center;
+  }
+
+  .table_div {
+    margin-top: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  h2 {
+    text-align: center;
+  }
