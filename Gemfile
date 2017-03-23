@@ -41,8 +41,9 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails'
   gem 'pry'
-  gem 'better_errors'
+  # gem 'better_errors'
   gem 'shoulda-matchers'
+  gem 'simplecov', :require => false, :group => :test
 end
 
 group :development do
