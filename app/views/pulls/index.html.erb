@@ -1,0 +1,22 @@
+<h2>Open Pull Requests</h2>
+
+<div class="table_div">
+<table class="table table-striped", id="repo_table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>id</th>
+      <th>Title</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pulls.each do |pull| %>
+    <tr>
+      <th scope="row"><%= pull.id %> </th>
+      <td><%= pull.title %></td>
+      <td><%= link_to pull.html_url %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

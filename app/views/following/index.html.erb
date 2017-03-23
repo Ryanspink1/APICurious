@@ -1,0 +1,22 @@
+<h2>Following</h2>
+
+<div class="table_div">
+<table class="table table-striped", id="repo_table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>id</th>
+      <th>Name</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @following.each do |follow| %>
+    <tr>
+      <th scope="row"><%= follow.id %> </th>
+      <td><%= follow.login %></td>
+      <td><%= link_to follow[:html_url] %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

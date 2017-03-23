@@ -13,3 +13,66 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+  body { padding-top: 70px; }
+
+  table {
+          /*align-items: center;*/
+
+  }
+
+  #repo_table {
+    width: 800px;
+    align-items: center;
+  }
+
+  .table_div {
+    margin-top: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .org_table_div {
+    /*margin-top: 350px;*/
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+
+  h2 {
+    text-align: center;
+  }
+
+  .dashboard_div {
+    margin-left: 300px;
+    margin-right: 300px;
+  }
+
+  .user_info {
+
+    text-align: center;
+  }
+
+  #starred_repos {
+    text-align: center;
+  }
+
+  .commit_head {
+    text-align: center;
+  }
+
+  .commits_div {
+    margin-top: 70px;
+  }
+
+  .nav_links {
+    align: center;
+  }
