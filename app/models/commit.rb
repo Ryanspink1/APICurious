@@ -19,8 +19,9 @@ class Commit < OpenStruct
   end
 
   def self.order_commits(current_user)
-    Commit.commits(current_user).sort_by do |commit|
+    commits = Commit.commits(current_user).sort_by do |commit|
       commit.commit[:committer][:date]
     end
+    commits.reverse[0..25]
   end
 end

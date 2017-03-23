@@ -1,0 +1,22 @@
+<h2>Organizations</h2>
+
+<div class="org_table_div">
+<table class="table table-striped", id="repo_table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>id</th>
+      <th>Name</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @organizations.each do |organization| %>
+    <tr>
+      <th scope="row"><%= organization.id %> </th>
+      <td><%= organization.login %></td>
+      <td><%= link_to "https://github.com/orgs/#{organization.login}" %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

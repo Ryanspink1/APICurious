@@ -1,4 +1,4 @@
-<h2>Repositories</h2>
+<h2>Following</h2>
 
 <div class="table_div">
 <table class="table table-striped", id="repo_table">
@@ -10,11 +10,11 @@
     </tr>
   </thead>
   <tbody>
-    <% @repos.each do |repo| %>
+    <% @following.each do |follow| %>
     <tr>
-      <th scope="row"><%= repo.id %> </th>
-      <td><%= repo.name %></td>
-      <td><%= link_to repo[:html_url] %></td>
+      <th scope="row"><%= follow.id %> </th>
+      <td><%= follow.login %></td>
+      <td><%= link_to follow[:html_url] %></td>
     </tr>
     <% end %>
   </tbody>

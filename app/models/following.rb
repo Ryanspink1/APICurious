@@ -19,6 +19,6 @@ class Following < OpenStruct
         following_events<<Following.new(event)
       end
     end
-    following_events.sort_by {|event| event.created_at}
+    following_events.sort_by {|event| event.created_at}.reverse
   end
 end

@@ -1,4 +1,4 @@
-class ReposController < ApplicationController
+class OrganizationsController < ApplicationController
   before_action :authorize!
 
   def index

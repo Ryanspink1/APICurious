@@ -1,4 +1,35 @@
-<h1>Authorized</h1>
-<%= link_to "Events", events_path %>
-<%= link_to "Pulls", pulls_path %>
-<%= link_to "Repos", repos_path %>
+
+<div class="dashboard_div">
+  <div class="user_info">
+<img src=<%=@current_user.image%> width="150" height="150" class=".img-rounded" alt="profile_pic">
+<h1><%= @current_user.username %> </h1>
+</div>
+<div id="starred_repos">
+  <h5>Starred Repos: <%= @starred_count %></h3>
+</div>
+  <div class="commits_div">
+     <h3 class="commit_head">Recent Commits:</h3  >
+       <div class="commit_div">
+       <table class="table table-striped", id="repo_table">
+         <thead class="thead-inverse">
+           <tr>
+             <th>Date</th>
+             <th>Message</th>
+             <th>Link</th>
+           </tr>
+         </thead>
+         <tbody>
+           <% @commits.each do |commit| %>
+           <tr>
+             <th scope="row"><%= commit.commit[:committer][:date] %> </th>
+             <td><%= commit.commit[:message]%></td>
+             <td><%= link_to "Link", commit.html_url %></td>
+           </tr>
+           <% end %>
+         </tbody>
+       </table>
+       </div>
+     </div>
+   </div>
+</div>
+</div>
