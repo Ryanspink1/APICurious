@@ -15,14 +15,14 @@ describe Commit do
         commit = commits.first
         commit_last = commits.last
 
-        expect(commits.count).to eq(373)
-        expect(commits.count).to_not eq(374)
+        expect(commits.count).to eq(26)
+        expect(commits.count).to_not eq(27)
 
-        expect(commit.commit[:committer][:date]).to eq("2013-12-19T02:15:27Z")
-        expect(commit.commit[:committer][:date]).to_not eq("2014-12-19T02:15:27Z")
-
-        expect(commit_last.commit[:committer][:date]).to eq("2017-03-21T06:10:42Z")
+        expect(commit_last.commit[:committer][:date]).to eq("2017-03-16T20:13:13Z")
         expect(commit_last.commit[:committer][:date]).to_not eq("2014-12-19T02:15:27Z")
+
+        expect(commit.commit[:committer][:date]).to eq("2017-03-21T06:10:42Z")
+        expect(commit.commit[:committer][:date]).to_not eq("2014-12-19T02:15:27Z")
       end
     end
   end
