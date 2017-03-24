@@ -13,6 +13,5 @@ class Event < OpenStruct
         commit_events << event
       end
     end
-    binding.pry
   end
 end
