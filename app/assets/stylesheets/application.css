@@ -74,3 +74,12 @@
     margin-top: 100px;
     text-align: center;
   }
+
+  .jumbotron_home_text {
+    text-align: center;
+  }
+
+  #home_pic {
+    width: 200px;
+    height: 200px;
+  }
