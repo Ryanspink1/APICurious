@@ -1,7 +1,7 @@
 
 <div class="dashboard_div">
   <div class="user_info">
-<img src=<%=@current_user.image%> width="150" height="150" class=".img-rounded" alt="profile_pic">
+<img src=<%=@current_user.image %> width="150" height="150" class=".img-rounded" alt="profile_pic">
 <h1><%= @current_user.username %> </h1>
 </div>
 <div id="starred_repos">
@@ -23,7 +23,7 @@
            <tr>
              <th scope="row"><%= commit.commit[:committer][:date] %> </th>
              <td><%= commit.commit[:message]%></td>
-             <td><%= link_to "Commit", commit.html_url %></td>
+             <td><%= link_to "View", commit.html_url %></td>
            </tr>
            <% end %>
          </tbody>

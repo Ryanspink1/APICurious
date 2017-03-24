@@ -46,11 +46,11 @@ describe Following do
         expect(event.type).to eq("IssuesEvent")
         expect(event.login).to_not eq("PushEvent")
 
-        expect(event.id).to eq("5542984475")
-        expect(event.id).to_not eq("5545893233")
+        expect(event_last.id).to eq("5542984475")
+        expect(event_last.id).to_not eq("5545893233")
 
-        expect(event_last.id).to eq("5545893233")
-        expect(event_last.id).to_not eq("5542984475")
+        expect(event.id).to eq("5545893233")
+        expect(event.id).to_not eq("5542984475")
       end
     end
   end

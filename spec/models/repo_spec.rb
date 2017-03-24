@@ -12,7 +12,7 @@ describe Repo do
                                   )
 
         repos = Repo.find_by(current_user)
-        binding.pry
+        
         expect(repos.count).to eq(29)
 
         expect(repos.first.name).to eq("advanced_enums")
