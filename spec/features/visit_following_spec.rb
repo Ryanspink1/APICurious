@@ -15,14 +15,14 @@ describe "following" do
 
   describe "when an authenticated user visits the following page" do
     it "displays all of users following users" do
-      # VCR.use_cassette("features/following_info") do
+      VCR.use_cassette("features/following_info") do
 
         visit(following_path)
-        save_and_open_page
+
         expect(page).to have_content("Following")
         expect(page).to have_content("andrewdwooten")
         expect(page).to_not have_content("alabaster")
-      # end
+      end
     end
   end
 end
