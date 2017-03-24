@@ -23,7 +23,7 @@
            <tr>
              <th scope="row"><%= commit.commit[:committer][:date] %> </th>
              <td><%= commit.commit[:message]%></td>
-             <td><%= link_to "Link", commit.html_url %></td>
+             <td><%= link_to "Commit", commit.html_url %></td>
            </tr>
            <% end %>
          </tbody>
