@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "following" do
+describe "following events" do
   attr_reader :current_user, :session
 
   before(:each) do
@@ -13,13 +13,16 @@ describe "following" do
     ApplicationController.any_instance.stub(:current_user).and_return(@current_user)
   end
 
-  describe "when an authenticated user visits the following page" do
-    it "displays all of users following users" do
-      VCR.use_cassette("features/following_info") do
-        visit(following_path)
+  describe "when an authenticated user visits following events page" do
+    it "displays all users events that user is following" do
+      VCR.use_cassette("features/following_events_info") do
 
-        expect(page).to have_content("Following")
+        visit(following_events_path)
+
+        expect(page).to have_content("Recent Activity from Users You Follow")
         expect(page).to have_content("andrewdwooten")
+        expect(page).to have_content("andrewdwooten/APICurious-GitHub2")
+        expect(page).to have_content("PushEvent")
         expect(page).to_not have_content("alabaster")
       end
     end
